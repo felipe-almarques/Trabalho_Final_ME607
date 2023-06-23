@@ -1,4 +1,3 @@
-library(tidyverse)
+df <- table(iris$Species)
 
-iris %>%
-  ggplot(aes(
+write.csv(df, "../data/")

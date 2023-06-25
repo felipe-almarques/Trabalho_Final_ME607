@@ -15,6 +15,7 @@ jobs:
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
+          sudo apt-get install libbz2-dev
           python -m pip install pandas
           python -m pip install datetime
           python enviar_email.py

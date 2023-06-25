@@ -14,7 +14,9 @@ jobs:
           python-version: 3.8 # Install the python version needed
       - name: Install Python dependencies
         run: |
-          python -m pip install email
+          python -m pip install email.mime.multipart
+          python -m pip install email.mime.base
+          python -m pip install email.mime.text
       - name: Execute Python Script # Run the run.py on the repository root directory
         run: |
           python email.py

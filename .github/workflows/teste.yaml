@@ -15,8 +15,8 @@ jobs:
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install pandas
           pip install pipenv 
+          pip install pandas
           pipenv install
           pipenv run python enviar_email.py
       #- name: Execute Python Script # Run the run.py on the repository root directory

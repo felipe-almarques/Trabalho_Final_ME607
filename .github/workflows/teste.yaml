@@ -49,10 +49,10 @@ jobs:
       - uses: actions/checkout@master 
       - uses: actions/setup-python@v4
         with: 
-          python-version: '3.10'
+          python-version: '3.8'
       - name: Run python script
         run: |
-          python3 -m pip install smtplib
+          python3 -m pip install pandas
         # Rodando o Script
       - name: Enviando e-mail
         run: python email.py

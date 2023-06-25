@@ -53,6 +53,8 @@ jobs:
       - name: Run python script
         run: |
           python -m pip install --upgrade pip requests
+          python -m pip install email
+          python -m pip install smtplib
         # Rodando o Script
       - name: Enviando e-mail
         run: python email.py

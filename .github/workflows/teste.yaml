@@ -47,12 +47,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master 
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v2
         with: 
           python-version: '3.8'
       - name: Run python script
         run: |
-          python3 -m pip install pandas
+          python -m pip install --upgrade pip requests
         # Rodando o Script
       - name: Enviando e-mail
         run: python email.py

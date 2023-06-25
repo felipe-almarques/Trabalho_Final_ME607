@@ -1,5 +1,5 @@
 import smtplib
-import pandas as pd
+import pandas
 import datetime
 
 # Para poder enviar o email

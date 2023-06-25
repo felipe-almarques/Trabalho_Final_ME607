@@ -32,22 +32,22 @@ email_msg['To'] = "f236106@dac.unicamp.br"
 email_msg['Subject'] = "Meu e-mail enviado automaticamente"
 email_msg.attach(MIMEText(corpo, 'html')) # pode ser 'plain' também
 
-# # Anexar arquivos
-# # Abrimos o arquivo em modo leitura e binary  
-# cam_arquivo = "#######"
-# attachment = open(cam_arquivo, 'rb') # read binary
+# Anexar arquivos
+# Abrimos o arquivo em modo leitura e binary  
+cam_arquivo = "data/2023-06-25_valor_predito.csv"
+attachment = open(cam_arquivo, 'rb') # read binary
 
-# # Lemos o arquivo em modo binario e jogamos codificado em modo 64 (que é oq o email precisa)
-# att = MIMEBase('application', 'octet-stream')
-# att.set_payload(attachment.read())
-# encoders.encode_base64(att)
+# Lemos o arquivo em modo binario e jogamos codificado em modo 64 (que é oq o email precisa)
+att = MIMEBase('application', 'octet-stream')
+att.set_payload(attachment.read())
+encoders.encode_base64(att)
 
-# # Adicionamos o cabeçalho no tipo anexo de email
-# att.add_header('Content-Disposition', 'attachment; filename= nome_do_arquivo')
-# # Fechamos o arquivo
-# attachment.close()
-# # Colocamos o anexo no corpo do email
-# email_msg.attach(att)
+# Adicionamos o cabeçalho no tipo anexo de email
+att.add_header('Content-Disposition', 'attachment; filename= nome_do_arquivo')
+# Fechamos o arquivo
+attachment.close()
+# Colocamos o anexo no corpo do email
+email_msg.attach(att)
 
 # Enviar email tipo MIME no servidor SMTP
 server.sendmail(email_msg['From'], email_msg['To'], email_msg.as_string())

@@ -55,7 +55,7 @@ att.set_payload(attachment.read())
 encoders.encode_base64(att)
 
 # Adicionamos o cabeçalho no tipo anexo de email
-att.add_header('Content-Disposition', 'attachment; filename= Arquivo_teste')
+att.add_header('Content-Disposition', 'attachment; filename= Previsao.csv')
 # Fechamos o arquivo
 attachment.close()
 # Colocamos o anexo no corpo do email

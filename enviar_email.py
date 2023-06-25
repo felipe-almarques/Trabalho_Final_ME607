@@ -27,7 +27,7 @@ corpo = '<b>Olá, tudo bom?</b>'
 
 email_msg = MIMEMultipart()
 email_msg['From'] = login
-email_msg['To'] = login
+email_msg['To'] = "f236106@dac.unicamp.br"
 email_msg['Subject'] = "Meu e-mail enviado por Pitão"
 email_msg.attach(MIMEText(corpo, 'html')) # pode ser 'plain' também
 

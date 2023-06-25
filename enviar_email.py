@@ -33,20 +33,20 @@ email_msg.attach(MIMEText(corpo, 'html')) # pode ser 'plain' também
 
 # Anexar arquivos
 # Abrimos o arquivo em modo leitura e binary  
-cam_arquivo = "#######"
-attachment = open(cam_arquivo, 'rb') # read binary
+#cam_arquivo = "#######"
+#attachment = open(cam_arquivo, 'rb') # read binary
 
 # Lemos o arquivo em modo binario e jogamos codificado em modo 64 (que é oq o email precisa)
-att = MIMEBase('application', 'octet-stream')
-att.set_payload(attachment.read())
-encoders.encode_base64(att)
+#att = MIMEBase('application', 'octet-stream')
+#att.set_payload(attachment.read())
+#encoders.encode_base64(att)
 
 # Adicionamos o cabeçalho no tipo anexo de email
-att.add_header('Content-Disposition', 'attachment; filename= nome_do_arquivo')
+#att.add_header('Content-Disposition', 'attachment; filename= nome_do_arquivo')
 # Fechamos o arquivo
-attachment.close()
+#attachment.close()
 # Colocamos o anexo no corpo do email
-email_msg.attach(att)
+#email_msg.attach(att)
 
 # Enviar email tipo MIME no servidor SMTP
 server.sendmail(email_msg['From'], email_msg['To'], email_msg.as_string())

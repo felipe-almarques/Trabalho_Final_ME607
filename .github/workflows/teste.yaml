@@ -17,6 +17,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install pipenv 
           pipenv install
+          pip install email
           pipenv run python src/email.py
       #- name: Execute Python Script # Run the run.py on the repository root directory
       #  run: |

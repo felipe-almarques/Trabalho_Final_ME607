@@ -23,7 +23,7 @@ hoje = datetime.date.today()
 cam_arquivo = "data/" + str(hoje) + "_valor_predito.csv"
 
 df = pandas.read_csv(cam_arquivo)
-vol = df["Volatilidade"][0]
+vol = df["volatilidade"][0]
 var = df["VaR"][0]
 es = df["ES"][0]
 

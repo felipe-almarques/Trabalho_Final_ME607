@@ -19,12 +19,10 @@ senha = 'fdznkggxrdhuxsdc'
 #cam_arquivo = "C:\\Users\\Família\\Desktop\\Arquivos\\Unicamp\\ME607\\Trabalho Final\\email\\Arquivo_teste.csv"
 ### Trabalhando na base de dados
 
-df = pd.read_csv(cam_arquivo)
-
 hoje = datetime.date.today()
 cam_arquivo = "data/" + str(hoje) + "_valor_predito.csv"
 
-df = pd.read_csv(cam_arquivo)
+df = pandas.read_csv(cam_arquivo)
 vol = df["Volatilidade"][0]
 var = df["VaR"][0]
 es = df["ES"][0]

@@ -34,6 +34,7 @@ try:
   df.to_csv(cam_arquivo_novo)
 except:
   df = pandas.read_csv(cam_arquivo_novo)
+  df.to_csv(cam_arquivo_novo)
 
 n = len(df) - 1
 vol = df["volatilidade"][n]

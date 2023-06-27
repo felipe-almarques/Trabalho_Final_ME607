@@ -55,7 +55,7 @@ server.login(login, senha)
 
 email_msg = MIMEMultipart()
 email_msg['From'] = login
-email_msg['To'] = "f236106@dac.unicamp.br"
+email_msg['To'] = "ctrucios@unicamp.br"
 email_msg['Subject'] = "Previsao de hoje"
 email_msg.attach(MIMEText(corpo, 'html')) # pode ser 'plain' também
 

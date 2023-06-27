@@ -27,8 +27,13 @@ cam_arquivo_novo = "data/" + str(hoje) + "_valor_predito.csv"
 
 df1 = pandas.read_csv(cam_arquivo_antigo)
 df2 = pandas.read_csv(cam_arquivo_novo)
+print("Baixou os df corretamente")
+
 df = df1.append(df2, ignore_index=True)
+print("criou o novo df")
+
 df.to_csv(cam_arquivo_novo)
+print("Escreveu o csv")
 
 vol = df["volatilidade"][-1]
 var = df["VaR"][-1]

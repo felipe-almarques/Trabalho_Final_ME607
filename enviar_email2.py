@@ -27,17 +27,15 @@ cam_arquivo_novo = "data/" + str(hoje) + "_valor_predito.csv"
 
 df1 = pandas.read_csv(cam_arquivo_antigo)
 df2 = pandas.read_csv(cam_arquivo_novo)
-print("Baixou os df corretamente")
 
 df = df1.append(df2, ignore_index=True)
-print("criou o novo df")
 
 df.to_csv(cam_arquivo_novo)
-print("Escreveu o csv")
 
-vol = df["volatilidade"][-1]
-var = df["VaR"][-1]
-es = df["ES"][-1]
+n = len(df) - 1
+vol = df["volatilidade"][n]
+var = df["VaR"][n]
+es = df["ES"][n]
 
 corpo = f"Ao modelar a série de retorno das ações da Apple, o modelo escolhido GARCH(1,1) realizou previsões um passo a frente para algumas medidas importantes.\nDentre tais medidas, nosso modelo previu um valor de volatilidade igual a {vol}, valor de risco de {var} e perda prevista de {es}. O resultado fora apresentado no arquivo csv em anexa."
 

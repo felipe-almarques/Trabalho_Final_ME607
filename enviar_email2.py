@@ -41,7 +41,7 @@ vol = df["volatilidade"][n]
 var = df["VaR"][n]
 es = df["ES"][n]
 
-corpo = f"Ao modelar a série de retorno das ações da Apple, o modelo escolhido GARCH(1,1) realizou previsões um passo a frente para algumas medidas importantes.\nDentre tais medidas, nosso modelo previu um valor de volatilidade igual a {vol}, valor de risco de {var} e perda prevista de {es}. O resultado fora apresentado no arquivo csv em anexa."
+corpo = f"Grupo: Brenda (ra: 167101), Felipe (ra: 236106) e Rubens (ra: 236292).\nAo modelar a série de retorno das ações da Apple, o modelo escolhido GARCH(1,1) realizou previsões um passo a frente para algumas medidas importantes.\nDentre tais medidas, nosso modelo previu um valor de volatilidade igual a {vol}, valor de risco de {var} e perda prevista de {es} (ambas considerando um nível de significância de 2,5%). O resultado fora apresentado no arquivo csv em anexa."
 
 server = smtplib.SMTP(host, port)
 server.ehlo()

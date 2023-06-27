@@ -57,7 +57,7 @@ email_msg.attach(MIMEText(corpo, 'html')) # pode ser 'plain' também
 
 # Anexar arquivos
 # Abrimos o arquivo em modo leitura e binary  
-attachment = open(cam_arquivo, 'rb') # read binary
+attachment = open(cam_arquivo_novo, 'rb') # read binary
 
 # Lemos o arquivo em modo binario e jogamos codificado em modo 64 (que é oq o email precisa)
 att = MIMEBase('application', 'octet-stream')

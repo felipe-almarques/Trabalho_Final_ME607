@@ -25,12 +25,15 @@ ontem = hoje - datetime.timedelta(1)
 cam_arquivo_antigo = "data/" + str(ontem) + "_valor_predito.csv"
 cam_arquivo_novo = "data/" + str(hoje) + "_valor_predito.csv"
 
-df1 = pandas.read_csv(cam_arquivo_antigo)
-df2 = pandas.read_csv(cam_arquivo_novo)
-
-df = df1.append(df2, ignore_index=True)
-
-df.to_csv(cam_arquivo_novo)
+try:
+  df1 = pandas.read_csv(cam_arquivo_antigo)
+  df2 = pandas.read_csv(cam_arquivo_novo)
+  
+  df = df1.append(df2, ignore_index=True)
+  
+  df.to_csv(cam_arquivo_novo)
+except:
+  df = pandas.read_csv(cam_arquivo_novo)
 
 n = len(df) - 1
 vol = df["volatilidade"][n]

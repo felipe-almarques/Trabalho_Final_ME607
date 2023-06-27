@@ -52,7 +52,7 @@ server.login(login, senha)
 email_msg = MIMEMultipart()
 email_msg['From'] = login
 email_msg['To'] = "f236106@dac.unicamp.br"
-email_msg['Subject'] = "Meu e-mail enviado automaticamente"
+email_msg['Subject'] = "Previsao de hoje"
 email_msg.attach(MIMEText(corpo, 'html')) # pode ser 'plain' também
 
 # Anexar arquivos
@@ -65,7 +65,8 @@ att.set_payload(attachment.read())
 encoders.encode_base64(att)
 
 # Adicionamos o cabeçalho no tipo anexo de email
-att.add_header('Content-Disposition', 'attachment; filename= Previsao.csv')
+nome = "Previsao_" + hoje + ".csv"
+att.add_header('Content-Disposition', f'attachment; filename= {nome}')
 # Fechamos o arquivo
 attachment.close()
 # Colocamos o anexo no corpo do email

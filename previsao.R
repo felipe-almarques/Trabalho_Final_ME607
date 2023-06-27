@@ -32,7 +32,7 @@ xf = function(x, mu_, sigma_, shape_) {
           shape = shape_)
 }
 
-alpha <- 0.05
+alpha <- 0.025
 var <- qdist(distribution = "std", alpha, mu = previsao@forecast[["seriesFor"]][1], sigma = sigma(previsao)[1], skew = 0, shape = coef(fit)["shape"])
 ES = integrate(xf, 
                 -Inf, 

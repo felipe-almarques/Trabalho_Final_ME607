@@ -14,7 +14,7 @@ from email import encoders
 host = 'smtp.gmail.com'
 port = '587'
 login = 'gruposeriestemporais@gmail.com'
-senha = 'fdznkggxrdhuxsdc'
+senha = '####'
 
 #cam_arquivo = "C:\\Users\\Família\\Desktop\\Arquivos\\Unicamp\\ME607\\Trabalho Final\\email\\Arquivo_teste.csv"
 ### Trabalhando na base de dados
@@ -55,7 +55,7 @@ server.login(login, senha)
 
 email_msg = MIMEMultipart()
 email_msg['From'] = login
-email_msg['To'] = "ctrucios@unicamp.br"
+email_msg['To'] = "#####"
 email_msg['Subject'] = "Previsao de hoje"
 email_msg.attach(MIMEText(corpo, 'html')) # pode ser 'plain' também
 
